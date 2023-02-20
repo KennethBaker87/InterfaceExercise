@@ -22,7 +22,7 @@ namespace InterfaceExercise
                 HeadLights = 2,
                 Logo = "Two Stripes",
                 Slogan = "If you ain't first you're last.",
-                TrunkSpace= 2,
+                TrunkSpace=11,
                 Convertible = false
 
             };
@@ -35,7 +35,7 @@ namespace InterfaceExercise
                 HeadLights = 2,
                 Logo = "Ford Circle",
                 Slogan = "Built Ford Tough.",
-                TruckBedSize = 2,
+                TruckBedSize = 51,
                 ExtraCab = true
             };
 
@@ -62,7 +62,7 @@ namespace InterfaceExercise
                 Console.WriteLine($"Number of Headlights {car.HeadLights}");
                 Console.WriteLine($"Logo Description: {car.Logo}");
                 Console.WriteLine($"Slogan: {car.Slogan}");
-                Console.WriteLine($"Amount of Trunk Space: {car.TrunkSpace}");
+                Console.WriteLine($"Amount of Trunk Space: {car.TrunkSpace}ft cubed");
                 Console.WriteLine($"Is a Convertible: {car.Convertible}");
                 Console.WriteLine();
             }
@@ -74,7 +74,7 @@ namespace InterfaceExercise
                 Console.WriteLine($"Number of Headlights {truck.HeadLights}");
                 Console.WriteLine($"Logo Description: {truck.Logo}");
                 Console.WriteLine($"Slogan: {truck.Slogan}");
-                Console.WriteLine($"Space in bed: {truck.TruckBedSize}");
+                Console.WriteLine($"Space in bed: {truck.TruckBedSize}in.");
                 Console.WriteLine($"Has Extra Cab {truck.ExtraCab}");
                 Console.WriteLine();
             }
