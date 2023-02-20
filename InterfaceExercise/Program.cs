@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http.Headers;
+using System.Runtime.ConstrainedExecution;
 
 namespace InterfaceExercise
 {
@@ -6,6 +10,89 @@ namespace InterfaceExercise
     {
         static void Main(string[] args)
         {
+            var carList = new List<Car>();
+            var truckList = new List<Truck>();
+            var suvList = new List<SUV>();
+
+            Car challenger = new Car
+            {
+                Doors = 4,
+                Wipers = 2,
+                Wheels = 4,
+                HeadLights = 2,
+                Logo = "Two Stripes",
+                Slogan = "If you ain't first you're last.",
+                TrunkSpace= 2,
+                Convertible = false
+
+            };
+
+            Truck f150 = new Truck
+            {
+                Doors = 2,
+                Wipers = 2,
+                Wheels = 4,
+                HeadLights = 2,
+                Logo = "Ford Circle",
+                Slogan = "Built Ford Tough.",
+                TruckBedSize = 2,
+                ExtraCab = true
+            };
+
+            SUV armada = new SUV
+            {
+                Doors = 4,
+                Wipers = 3,
+                Wheels = 4,
+                HeadLights = 2,
+                Logo = "Nissan Circle",
+                Slogan = "Shift Expectations.",
+                PowerFoldingSeats = true,
+                Navigation = true
+
+            };
+            carList.Add(challenger);
+            truckList.Add(f150);
+            suvList.Add(armada);
+            foreach (var car in carList)
+            {
+                Console.WriteLine($"Number of Doors: {car.Doors}");
+                Console.WriteLine($"Number of Wipers: {car.Wipers}");
+                Console.WriteLine($"Number of Wheels: {car.Wheels}");
+                Console.WriteLine($"Number of Headlights {car.HeadLights}");
+                Console.WriteLine($"Logo Description: {car.Logo}");
+                Console.WriteLine($"Slogan: {car.Slogan}");
+                Console.WriteLine($"Amount of Trunk Space: {car.TrunkSpace}");
+                Console.WriteLine($"Is a Convertible: {car.Convertible}");
+                Console.WriteLine();
+            }
+            foreach (var truck in truckList)
+            {
+                Console.WriteLine($"Number of Doors: {truck.Doors}");
+                Console.WriteLine($"Number of Wipers: {truck.Wipers}");
+                Console.WriteLine($"Number of Wheels: {truck.Wheels}");
+                Console.WriteLine($"Number of Headlights {truck.HeadLights}");
+                Console.WriteLine($"Logo Description: {truck.Logo}");
+                Console.WriteLine($"Slogan: {truck.Slogan}");
+                Console.WriteLine($"Space in bed: {truck.TruckBedSize}");
+                Console.WriteLine($"Has Extra Cab {truck.ExtraCab}");
+                Console.WriteLine();
+            }
+            foreach (var suv in suvList)
+            {
+                Console.WriteLine($"Number of Doors: {suv.Doors}");
+                Console.WriteLine($"Number of Wipers: {suv.Wipers}");
+                Console.WriteLine($"Number of Wheels: {suv.Wheels}");
+                Console.WriteLine($"Number of Headlights {suv.HeadLights}");
+                Console.WriteLine($"Logo Description: {suv.Logo}");
+                Console.WriteLine($"Slogan: {suv.Slogan}");
+                Console.WriteLine($"Has Power Folding Seats: {suv.PowerFoldingSeats}");
+                Console.WriteLine($"Has Navigation: {suv.Navigation}");
+                Console.WriteLine();
+            }
+
+            
+
             //TODO Be sure to follow BEST PRACTICES when creating classes and interfaces
 
             //Create 2 Interfaces called IVehicle & ICompany
